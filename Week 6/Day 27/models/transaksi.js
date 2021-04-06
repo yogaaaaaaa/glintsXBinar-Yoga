@@ -31,6 +31,6 @@ const TransaksiSchema = new mongoose.Schema(
 
 //enable soft delete
 
-TransaksiSchema.plugin(mongooseDelete, { overrideMethods: "all "});
+TransaksiSchema.plugin(mongooseDelete, { overrideMethods: "all"});
 
 module.exports = mongoose.model("transaksi", TransaksiSchema, "transaksi");

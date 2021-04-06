@@ -2,6 +2,7 @@ const mongoose = require("mongoose"); //importing mongoose
 
 const uri = process.env.MONGO_URI; // adding the uri for MongoDB
 
+console.log(uri);
 // try {
 //     //connecting express to mongodb with mongodb
 // mongoose.connect(uri, {
@@ -31,5 +32,6 @@ const barang = require("./barang");
 const pelanggan = require("./pelanggan");
 const pemasok = require("./pemasok");
 const transaksi = require("./transaksi");
+const user = require("./user");
 
-module.exports = { barang, pelanggan, pemasok, transaksi };
+module.exports = { barang, pelanggan, pemasok, transaksi, user };
