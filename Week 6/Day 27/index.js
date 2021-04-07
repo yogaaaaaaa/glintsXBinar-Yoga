@@ -17,12 +17,13 @@ const app = express();
 
 //body parser to read  req.body
 
-app.use(express.json());
+app.use(express.json()); // Enable req.body JSON type
 app.use(
     express.urlencoded({
         extended: true,
     })
-)
+); //support urlencode bldy
+
 //to read form-data request
 app.use(fileUpload());
 

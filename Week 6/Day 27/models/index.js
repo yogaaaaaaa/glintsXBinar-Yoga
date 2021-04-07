@@ -2,21 +2,8 @@ const mongoose = require("mongoose"); //importing mongoose
 
 const uri = process.env.MONGO_URI; // adding the uri for MongoDB
 
-console.log(uri);
-// try {
-//     //connecting express to mongodb with mongodb
-// mongoose.connect(uri, {
-//     useUnifiedTopology: true, //required for initialise
-//     useNewUrlParser: true, //required for initialise
-//     useCreateIndex: true, //use to enable unique data type
-//     useFindAndModify: false, // use findOneAndUpdate instead of findAndModify
-//   });
 
-//   console.log("mognoDB connected");
-// } catch (e) {
-//     console.log(e);
-// }
-
+//connect express to mongoDB with mongoose
 mongoose
   .connect(uri, {
     useUnifiedTopology: true, //required for initialise

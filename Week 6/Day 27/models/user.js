@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const mongooseDelete = require("mongoose-delete");
+const mongoose = require("mongoose"); //import mongoose
+const mongooseDelete = require("mongoose-delete"); //import mongoose-delete
 
 const UserSchema = new mongoose.Schema(
   {
