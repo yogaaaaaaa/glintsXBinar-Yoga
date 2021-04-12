@@ -1,5 +1,5 @@
 require("dotenv").config({
-    path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 //express
@@ -14,19 +14,17 @@ const barangRoutes = require("./routes/barangRoutes");
 //make express app
 const app = express();
 
-
 //body parser to read  req.body
 
 app.use(express.json()); // Enable req.body JSON type
 app.use(
-    express.urlencoded({
-        extended: true,
-    })
+  express.urlencoded({
+    extended: true,
+  })
 ); //support urlencode bldy
 
 //to read form-data request
 app.use(fileUpload());
-
 
 //set static file directory
 app.use(express.static("public"));
@@ -35,5 +33,14 @@ app.use(express.static("public"));
 app.use("/transaksi", transaksiRoutes);
 app.use("/barang", barangRoutes);
 app.use("/auth", authRoutes);
-//running server
-app.listen(3000, () => console.log("server running on 3000"));
+
+
+//if environment is test this wont get executed
+// if (process.env.NODE_ENV !== "test") {
+  //running server
+  app.listen(3000, () => console.log("server running on 3000"));
+// }
+
+
+//exporting app for unit testing
+module.exports = app;

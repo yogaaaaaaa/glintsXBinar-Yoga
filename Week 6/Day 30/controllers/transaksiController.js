@@ -18,7 +18,7 @@ class TransaksiController {
 
       //if success
       return res.status(200).json({
-        message: "succeess",
+        message: "success",
         data,
       });
     } catch (e) {
@@ -42,7 +42,7 @@ class TransaksiController {
         });
       }
       return res.status(200).json({
-        message: "sukses",
+        message: "success",
         data,
       });
     } catch (e) {
