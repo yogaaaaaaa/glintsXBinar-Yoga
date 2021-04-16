@@ -50,7 +50,7 @@ exports.create = async (req, res, next) => {
     });
   }
 
-  // If image was uploaded
+  // for image upload
   if (req.files) {
     const file = req.files.image;
 
